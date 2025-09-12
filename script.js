@@ -1,4 +1,4 @@
-const SERVER_URL = "https://certiwipe-backend.onrender.com"; // Your deployed server URL
+const SERVER_URL = "https://securewipe-backend.onrender.com"; // Your deployed server URL
 const POLLING_INTERVAL = 3000;
 
 // Global variables to control the connection state
