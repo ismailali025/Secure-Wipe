@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Wipe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="border-wrapper">
+        <div class="container">
+            <header class="header">
+                <h1>
+                    <!-- <img src="https://i.ibb.co/Q3cvBK15/Logo.jpg" alt="CodeHex Logo" class="header-logo">  -->
+                    Secure Wipe
+                </h1>
+                <p>Remote Data Erasure Dashboard</p>
+                <div class="connection-controls">
+                    <button id="connect-button" class="connect-button">Connect</button>
+                    <div id="status-indicator" class="status-light disconnected"></div>
+                    <span id="status-text">Disconnected</span>
+                </div>
+            </header>
+            <main>
+                <h2><i class="fas fa-satellite-dish"></i> Registered Agents</h2>
+                <div id="device-list" class="device-list">
+                    <p class="loading">Press "Connect" to fetch agent status.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
