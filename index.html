@@ -26,7 +26,7 @@
             <div class="hidden md:flex items-center space-x-6">
                  <a href="#" data-page="home" class="nav-link text-gray-300 hover:text-white font-semibold">Home</a>
                  <a href="#" data-page="dashboard" class="nav-link text-gray-300 hover:text-white font-semibold">Dashboard</a>
-                 <a href="#" data-page="about" class="nav-link text-gray-300 hover:text-white font-semibold">About</a>
+                 <a href="#" data-page="how-it-works" class="nav-link text-gray-300 hover:text-white font-semibold">How It Works</a>
             </div>
             <div class="flex items-center">
                 <button id="theme-toggle" class="p-2 rounded-full text-gray-300 hover:text-white focus:outline-none">
@@ -72,18 +72,47 @@
             </div>
         </section>
 
-        <section id="page-about" class="page-content page-hidden py-20">
-            <div class="container mx-auto px-6 text-center">
-                <h1 class="text-4xl md:text-5xl font-black text-white">Why Trust SecureWipe?</h1>
-                <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-300">Industry-leading security standards combined with environmental responsibility.</p>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
-                    <div class="feature-card glass-card rounded-xl p-6"><h3 class="text-lg font-bold text-white mt-4">Military-Grade Security</h3><p class="text-gray-400 text-sm mt-2">Algorithms ensure complete data destruction.</p></div>
-                    <div class="feature-card glass-card rounded-xl p-6"><h3 class="text-lg font-bold text-white mt-4">Eco-Friendly Process</h3><p class="text-gray-400 text-sm mt-2">Sustainable IT asset recycling with zero landfill waste.</p></div>
-                    <div class="feature-card glass-card rounded-xl p-6"><h3 class="text-lg font-bold text-white mt-4">Certified Compliance</h3><p class="text-gray-400 text-sm mt-2">Meets NIST, ISO, and GDPR data disposal standards.</p></div>
-                    <div class="feature-card glass-card rounded-xl p-6"><h3 class="text-lg font-bold text-white mt-4">Simple & Fast</h3><p class="text-gray-400 text-sm mt-2">A simple web interface for a complex, secure task.</p></div>
+        <section id="page-how-it-works" class="page-content page-hidden py-20">
+    <div class="container mx-auto px-6 text-center">
+        <h1 class="text-4xl md:text-5xl font-black text-white">How SecureWipe Works</h1>
+        <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-300">
+            A simple, three-step process to ensure your data is securely and permanently erased.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-8 text-left mt-16 max-w-5xl mx-auto">
+            
+            <div class="feature-card glass-card rounded-xl p-6">
+                <div class="flex items-center gap-4">
+                    <span class="flex items-center justify-center h-12 w-12 rounded-lg bg-sky-500/10 text-sky-400 font-bold text-2xl flex-shrink-0">1</span>
+                    <h3 class="text-xl font-bold text-white">Boot from USB</h3>
                 </div>
+                <p class="text-gray-400 mt-4">
+                    Insert the SecureWipe USB into the target computer and boot from it. This launches a secure, lightweight Linux environment, giving us direct access to the hardware.
+                </p>
             </div>
-        </section>
+
+            <div class="feature-card glass-card rounded-xl p-6">
+                <div class="flex items-center gap-4">
+                    <span class="flex items-center justify-center h-12 w-12 rounded-lg bg-sky-500/10 text-sky-400 font-bold text-2xl flex-shrink-0">2</span>
+                    <h3 class="text-xl font-bold text-white">Connect & Wipe</h3>
+                </div>
+                <p class="text-gray-400 mt-4">
+                    Run the agent to register the device on our dashboard. From the dashboard, simply click the "Connect" button, find your device, and click "WIPE" to begin the erasure.
+                </p>
+            </div>
+
+            <div class="feature-card glass-card rounded-xl p-6">
+                <div class="flex items-center gap-4">
+                    <span class="flex items-center justify-center h-12 w-12 rounded-lg bg-sky-500/10 text-sky-400 font-bold text-2xl flex-shrink-0">3</span>
+                    <h3 class="text-xl font-bold text-white">Verify & Recycle</h3>
+                </div>
+                <p class="text-gray-400 mt-4">
+                    Once the wipe is complete, you'll receive a status update. The device is now fully sanitized and ready for safe resale, donation, or recycling.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
 
     <footer class="border-t border-slate-800 mt-20">
