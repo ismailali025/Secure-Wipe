@@ -1,39 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure Wipe</title>
+    <title>SecureWipe - Secure Data Wiping</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="border-wrapper">
-        <div class="container">
-            <header class="header">
-                <h1>
-                    <!-- <img src="https://i.ibb.co/Q3cvBK15/Logo.jpg" alt="CodeHex Logo" class="header-logo">  -->
-                    Secure Wipe
-                </h1>
-                <p>Remote Data Erasure Dashboard</p>
-                <div class="connection-controls">
-                    <button id="connect-button" class="connect-button">Connect</button>
-                    <div id="status-indicator" class="status-light disconnected"></div>
-                    <span id="status-text">Disconnected</span>
+<body class="antialiased">
+
+    <header class="sticky top-0 z-50 glass-card">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" data-page="home" class="nav-link text-2xl font-bold flex items-center cursor-pointer text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-2 text-sky-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" /></svg>
+                SecureWipe
+            </a>
+            <div class="hidden md:flex items-center space-x-6">
+                 <a href="#" data-page="home" class="nav-link text-gray-300 hover:text-white font-semibold">Home</a>
+                 <a href="#" data-page="dashboard" class="nav-link text-gray-300 hover:text-white font-semibold">Dashboard</a>
+                 <a href="#" data-page="about" class="nav-link text-gray-300 hover:text-white font-semibold">About</a>
+            </div>
+            <div class="flex items-center">
+                <button id="theme-toggle" class="p-2 rounded-full text-gray-300 hover:text-white focus:outline-none">
+                    <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                    <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="page-home" class="page-content relative pt-24 pb-32 text-center">
+            <div class="gradient-bg absolute inset-0"></div>
+            <div class="relative container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl font-black text-white leading-tight">Securely Wipe Your Data.<br><span class="text-sky-400">Unlock Your Device's Value.</span></h1>
+                <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-300">Our free, NIST-compliant tool permanently erases all data, allowing you to recycle your old devices with complete peace of mind.</p>
+                <div class="mt-10">
+                    <a href="#" data-page="dashboard" class="nav-link bg-sky-500 hover:bg-sky-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-transform hover:scale-105">Go to Dashboard</a>
                 </div>
-            </header>
-            <main>
-                <h2><i class="fas fa-satellite-dish"></i> Registered Agents</h2>
-                <div id="device-list" class="device-list">
-                    <p class="loading">Press "Connect" to fetch agent status.</p>
+            </div>
+        </section>
+
+        <section id="page-dashboard" class="page-content page-hidden py-16">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="border-wrapper">
+                    <div class="dashboard-container">
+                        <header class="header">
+                            <h1 class="dashboard-title">SecureWipe Dashboard</h1>
+                            <div class="connection-controls">
+                                <button id="connect-button" class="connect-button">Connect</button>
+                                <div id="status-indicator" class="status-light disconnected"></div>
+                                <span id="status-text">Disconnected</span>
+                            </div>
+                        </header>
+                        <main>
+                            <h2 class="agents-title"><i class="fas fa-satellite-dish"></i> Registered Agents</h2>
+                            <div id="device-list" class="device-list">
+                                <p class="loading">Press "Connect" to fetch agent status.</p>
+                            </div>
+                        </main>
+                    </div>
                 </div>
-            </main>
+            </div>
+        </section>
+
+        <section id="page-about" class="page-content page-hidden py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-5xl font-black text-white">Why Trust SecureWipe?</h1>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-300">Industry-leading security standards combined with environmental responsibility.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+                    <div class="feature-card glass-card rounded-xl p-6"><h3 class="text-lg font-bold text-white mt-4">Military-Grade Security</h3><p class="text-gray-400 text-sm mt-2">Algorithms ensure complete data destruction.</p></div>
+                    <div class="feature-card glass-card rounded-xl p-6"><h3 class="text-lg font-bold text-white mt-4">Eco-Friendly Process</h3><p class="text-gray-400 text-sm mt-2">Sustainable IT asset recycling with zero landfill waste.</p></div>
+                    <div class="feature-card glass-card rounded-xl p-6"><h3 class="text-lg font-bold text-white mt-4">Certified Compliance</h3><p class="text-gray-400 text-sm mt-2">Meets NIST, ISO, and GDPR data disposal standards.</p></div>
+                    <div class="feature-card glass-card rounded-xl p-6"><h3 class="text-lg font-bold text-white mt-4">Simple & Fast</h3><p class="text-gray-400 text-sm mt-2">A simple web interface for a complex, secure task.</p></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-slate-800 mt-20">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <p>&copy; 2025 SecureWipe. A project by Team CodeHex for the Smart India Hackathon.</p>
         </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+    </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>

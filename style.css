@@ -1,148 +1,70 @@
-/* --- Root variables for the theme --- */
-:root {
-    --bg-gradient: linear-gradient(135deg, #0d0221, #0c1844);
-    --surface-color: rgba(20, 10, 60, 0.6);
-    --border-color: rgba(0, 255, 255, 0.3);
-    --neon-cyan: #00ffff;
-    --neon-magenta: #ff00ff;
-    --text-color: #e0e0e0;
-    --text-muted: #8a93a5;
-    --font-header: 'Orbitron', sans-serif;
-    --font-body: 'Roboto Mono', monospace;
-}
-
-/* --- Base Styles --- */
-*, *::before, *::after { box-sizing: border-box; }
-
+/* --- Base Styles and Theme --- */
 body {
-    font-family: var(--font-body);
-    background: var(--bg-gradient) no-repeat fixed;
-    color: var(--text-color);
-    margin: 0;
-    padding: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background-color: #0B1120;
+    color: #E0E0E0;
+    transition: background-color 0.3s, color 0.3s;
+}
+.gradient-bg { background: radial-gradient(circle at top, rgba(14, 58, 110, 0.4), transparent 50%); }
+.glass-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+.page-hidden { display: none; }
+
+/* --- Glow Hover Effect (from Zain's code) --- */
+.feature-card, .dashboard-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover, .dashboard-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.25);
 }
 
-/* --- Corner Border Effect --- */
-.border-wrapper {
-    position: relative;
-    padding: 2px;
-    width: 100%;
-    max-width: 900px;
-}
-.border-wrapper::before, .border-wrapper::after {
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    border-color: var(--neon-cyan);
-    border-style: solid;
+/* --- Your Corner Border Effect --- */
+.border-wrapper { position: relative; padding: 2px; }
+.border-wrapper::before, .border-wrapper::after, .dashboard-container::before, .dashboard-container::after {
+    content: ''; position: absolute; width: 30px; height: 30px;
+    border-color: #3b82f6; /* Tailwind sky-500 */
+    border-style: solid; transition: border-color 0.3s;
 }
 .border-wrapper::before { top: -2px; left: -2px; border-width: 2px 0 0 2px; }
 .border-wrapper::after { top: -2px; right: -2px; border-width: 2px 2px 0 0; }
+.dashboard-container::before { bottom: -2px; left: -2px; border-width: 0 0 2px 2px; }
+.dashboard-container::after { bottom: -2px; right: -2px; border-width: 0 2px 2px 0; }
 
-.container::before, .container::after {
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    border-color: var(--neon-cyan);
-    border-style: solid;
+/* --- Your Dashboard Styles (Adapted) --- */
+.dashboard-container {
+    background-color: rgba(11, 17, 32, 0.7);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    backdrop-filter: blur(10px); border-radius: 8px;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.1);
+    padding: 30px; width: 100%; transition: all 0.3s;
 }
-.container::before { bottom: -2px; left: -2px; border-width: 0 0 2px 2px; }
-.container::after { bottom: -2px; right: -2px; border-width: 0 2px 2px 0; }
-
-/* --- Main Layout --- */
-.container {
-    background-color: var(--surface-color);
-    border: 1px solid var(--border-color);
-    backdrop-filter: blur(10px);
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-    padding: 30px;
-    width: 100%;
-}
-
-header {
-    text-align: center;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-}
-
-header h1 {
-    font-family: var(--font-header);
-    font-size: 2.5em;
-    color: #fff;
-    text-shadow: 0 0 5px var(--neon-cyan), 0 0 10px var(--neon-cyan);
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.header-logo {
-    height: 45px;
-    width: auto;
-    margin-right: 15px;
-    vertical-align: middle;
-    filter: drop-shadow(0 0 8px var(--neon-cyan));
-    mix-blend-mode: screen; /* Blends the white background */
-}
-
-main h2 {
-    font-family: var(--font-header);
-    color: var(--neon-cyan);
-    text-align: center;
-    margin-top: 0;
-}
-main h2 i { margin-right: 10px; }
-
-/* --- Connection Controls --- */
-.connection-controls {
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.connect-button {
-    background: transparent;
-    border: 1px solid var(--border-color);
-    color: var(--neon-cyan);
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: var(--font-body);
-    font-weight: 500;
-    transition: all 0.2s;
-}
-.connect-button:hover { background: var(--neon-cyan); color: #000; box-shadow: 0 0 10px var(--neon-cyan); }
-
-.connect-button.active {
-    background: var(--neon-magenta);
-    border-color: var(--neon-magenta);
-    color: #fff;
-    box-shadow: 0 0 10px var(--neon-magenta);
-}
-
+.header { text-align: center; border-bottom: 1px solid rgba(59, 130, 246, 0.2); padding-bottom: 20px; margin-bottom: 20px; }
+.dashboard-title { font-family: 'Orbitron', sans-serif; font-size: 2.2em; color: #fff; text-shadow: 0 0 8px #3b82f6; }
+.agents-title { font-family: 'Orbitron', sans-serif; color: #3b82f6; text-align: center; margin: 20px 0; }
+.connection-controls { margin-top: 15px; display: flex; justify-content: center; align-items: center; gap: 10px; }
+.connect-button { background: #3b82f6; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 600; }
+.connect-button.active { background: #db2777; }
 .status-light { width: 12px; height: 12px; border-radius: 50%; }
-.status-light.disconnected { background-color: #e53935; }
-.status-light.connected { background-color: #4CAF50; }
-
-/* --- Device List Styles --- */
+.status-light.disconnected { background-color: #ef4444; }
+.status-light.connected { background-color: #22c55e; }
 .device-list { display: flex; flex-direction: column; gap: 15px; }
-.device-card { background-color: rgba(0,0,0,0.2); border-left: 3px solid var(--neon-cyan); border-radius: 6px; padding: 15px; display: flex; justify-content: space-between; align-items: center; }
-.device-info h3 { margin: 0 0 5px 0; font-size: 1.1em; color: var(--text-color); }
-.device-info p { margin: 0; font-size: 0.9em; color: var(--text-muted); }
-.status { font-weight: bold; }
-.status.completed { color: var(--neon-magenta); }
-.status.error { color: #e53935; }
-.status.registered { color: var(--neon-cyan); }
-.wipe-button { background-color: #c4105a; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background-color 0.3s; }
-.wipe-button:hover { background-color: #ff00ff; }
-.loading { text-align: center; color: var(--text-muted); font-style: italic; }
+.device-card { background-color: rgba(0,0,0,0.2); border-left: 3px solid #3b82f6; border-radius: 6px; padding: 15px; display: flex; justify-content: space-between; align-items: center; }
+.status { font-weight: bold; text-transform: capitalize; }
+.status.completed { color: #a855f7; }
+.status.error { color: #ef4444; }
+.status.registered { color: #3b82f6; }
+.wipe-button { background-color: #be123c; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+.loading { text-align: center; color: #9ca3af; font-style: italic; }
+
+/* --- Light Mode Styles --- */
+body.light-mode { background-color: #f3f4f6; color: #111827; }
+body.light-mode .gradient-bg { background: radial-gradient(circle at top, rgba(59, 130, 246, 0.1), transparent 60%); }
+body.light-mode .glass-card { background: rgba(255, 255, 255, 0.7); border: 1px solid #e5e7eb; }
+body.light-mode .text-white { color: #111827; }
+body.light-mode .text-gray-300 { color: #4b5563; }
+body.light-mode .text-gray-400 { color: #6b7280; }
+body.light-mode .border-slate-800 { border-color: #e5e7eb; }
+body.light-mode .dashboard-container { background-color: rgba(255, 255, 255, 0.8); border-color: #e5e7eb; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+body.light-mode .header { border-color: #e5e7eb; }
+body.light-mode .dashboard-title, body.light-mode .agents-title { text-shadow: none; }
+body.light-mode .device-card { background-color: #f9fafb; }
