@@ -78,22 +78,24 @@
         </p>
         <hr>
         <h2>👥 Team Members</h2>
-        <table align="center">
-          <tr>
-            <td align="center">Ismail (Team Lead)</td>
-            <td align="center">Khader</td>
-            <td align="center">Hyder</td>
-          </tr>
-          <tr>
-            <td align="center">Ather</td>
-            <td align="center">Shreya</td>
-            <td align="center">Alia</td>
-          </tr>
-        </table>
+        <div align="center">
+          <p>
+            <a href="https://github.com/github-username"><strong>Ismail Ali</strong></a>
+            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <a href="https://github.com/github-username"><strong>Khader Shareef</strong></a>
+            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <a href="https://github.com/github-username"><strong>Hyder Siddiqui</strong></a>
+          </p>
+          <p>
+            <a href="https://github.com/github-username"><strong>Ather Ali</strong></a>
+            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <a href="https://github.com/github-username"><strong>Shreya Tadakala</strong></a>
+            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <a href="https://github.com/github-username"><strong>Alia Samia</strong></a>
+          </p>
+        </div>
     </article>
     <footer>
         <hr>
     </footer>
-</div>
-
 </html>
