@@ -84,14 +84,14 @@
             &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
             <a href="https://github.com/KHADERSHAREEF19"><strong>Khader Shareef</strong></a>
             &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-            <a href="https://github.com/https://github.com/hydxr"><strong>Hyder Siddiqui</strong></a>
+            <a href="https://github.com/hydxr"><strong>Hyder Siddiqui</strong></a>
           </p>
           <p>
-            <a href="https://github.com/github-username"><strong>Ather Ali</strong></a>
+            <a href="https://github.com/SyedAther-ali"><strong>Ather Ali</strong></a>
             &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-            <a href="https://github.com/https://github.com/Shreya242005"><strong>Shreya Tadakala</strong></a>
+            <a href="https://github.com/Shreya242005"><strong>Shreya Tadakala</strong></a>
             &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-            <a href="https://github.com/github-username"><strong>Alia Samia</strong></a>
+            <a href="https://github.com/aliasyeda"><strong>Alia Samia</strong></a>
           </p>
         </div>
     </article>
