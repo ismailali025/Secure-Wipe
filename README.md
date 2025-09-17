@@ -10,9 +10,10 @@
 </p>
 <br>
 <p>
-<a href="https://secur-ewipe.vercel.app/"><strong>Explore the Live Dashboard »</strong></a>
+ <img src="https://github.com/KHADERSHAREEF19/Secure-Wipe/blob/main/video_2025-09-18_00-24-38.gif?raw=true" alt="SecureWipe Demo Video"/>
 </p>
-<img src="securewipe-dashboard.png" alt="SecureWipe Dashboard" width="800"/>
+<img src="image.png" alt="SecureWipe Dashboard" width="800"/><br>
+ <a href="https://secure-wipe.vercel.app/"><strong>Explore the Live Dashboard »</strong></a>
 </div>
 <hr>
         <h2>📄 Introduction</h2>
@@ -78,22 +79,24 @@
         </p>
         <hr>
         <h2>👥 Team Members</h2>
-        <table align="center">
-          <tr>
-            <td align="center">Ismail (Team Lead)</td>
-            <td align="center">Khader</td>
-            <td align="center">Hyder</td>
-          </tr>
-          <tr>
-            <td align="center">Ather</td>
-            <td align="center">Shreya</td>
-            <td align="center">Alia</td>
-          </tr>
-        </table>
+        <div align="center">
+          <p>
+            <a href="https://github.com/ismailali025"><strong>Ismail Ali</strong></a>
+            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <a href="https://github.com/KHADERSHAREEF19"><strong>Khader Shareef</strong></a>
+            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <a href="https://github.com/hydxr"><strong>Hyder Siddiqui</strong></a>
+          </p>
+          <p>
+            <a href="https://github.com/SyedAther-ali"><strong>Ather Ali</strong></a>
+            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <a href="https://github.com/Shreya242005"><strong>Shreya Tadakala</strong></a>
+            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <a href="https://github.com/aliasyeda"><strong>Alia Samia</strong></a>
+          </p>
+        </div>
     </article>
     <footer>
         <hr>
     </footer>
-</div>
-
 </html>
