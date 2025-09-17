@@ -12,7 +12,8 @@
 <p>
  <img src="https://github.com/KHADERSHAREEF19/Secure-Wipe/blob/main/video_2025-09-18_00-24-38.gif?raw=true" alt="SecureWipe Demo Video"/>
 </p>
-<img src="image.png" alt="SecureWipe Dashboard" width="800"/>
+<img src="image.png" alt="SecureWipe Dashboard" width="800"/><br>
+ <a href="https://secure-wipe.vercel.app/"><strong>Explore the Live Dashboard »</strong></a>
 </div>
 <hr>
         <h2>📄 Introduction</h2>
