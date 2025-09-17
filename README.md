@@ -10,7 +10,7 @@
 </p>
 <br>
 <p>
-<a href="https://secur-ewipe.vercel.app/"><strong>Explore the Live Dashboard »</strong></a>
+<img src="https://github.com/KHADERSHAREEF19/securewipe/blob/main/securewipe-demo.gif?raw=true" alt="SecureWipe Demo Video"/>
 </p>
 <img src="securewipe-dashboard.png" alt="SecureWipe Dashboard" width="800"/>
 </div>
