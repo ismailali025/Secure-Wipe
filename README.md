@@ -80,7 +80,7 @@
         <h2>👥 Team Members</h2>
         <div align="center">
           <p>
-            <a href="https://github.com/github-username"><strong>Ismail Ali</strong></a>
+            <a href="https://github.com/ismailali025"><strong>Ismail Ali</strong></a>
             &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
             <a href="https://github.com/github-username"><strong>Khader Shareef</strong></a>
             &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
