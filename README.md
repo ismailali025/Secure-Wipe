@@ -9,13 +9,10 @@
 <em>A project by Team CodeHex for the Smart India Hackathon 2025.</em>
 </p>
 <br>
- <p>
-        <a href="https://secur-ewipe.vercel.app/"><strong>Explore the Live Dashboard »</strong></a>
-</p>
 <p>
-<img src="https://github.com/KHADERSHAREEF19/securewipe/blob/main/securewipe-demo.gif?raw=true" alt="SecureWipe Demo Video"/>
+ <img src="https://github.com/KHADERSHAREEF19/Secure-Wipe/blob/main/video_2025-09-18_00-24-38.gif?raw=true" alt="SecureWipe Demo Video"/>
 </p>
-<img src="securewipe-dashboard.png" alt="SecureWipe Dashboard" width="800"/>
+<img src="image.png" alt="SecureWipe Dashboard" width="800"/>
 </div>
 <hr>
         <h2>📄 Introduction</h2>
